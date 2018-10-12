@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+    	function Herons_formula(a,b,c){
+        a = parseInt(a); b = parseInt(b); c = parseInt(c);
+        S = (a+b+c)/2;
+        A = Math.sqrt(S*(S-a)*(S-b)*(S-c));
+        return A;
+        }
+        function calculate_area(){
+        var a = prompt("Enter a");
+        var b = prompt("Enter b");
+        var c = prompt("Enter c");
+        var z = Herons_formula(a,b,c);
+        if(parseInt(a) + parseInt(b) > parseInt(c)
+        & parseInt(b) + parseInt(c) > parseInt(a)
+        & parseInt(a) + parseInt(c) > parseInt(b)) {
+        alert("The area of the triangle is " + z)
+        } else {
+        alert ("This triangle doesn't exist!")
+        };
+        }
+    </script>
+</head>
+<body>
+
+<h2>Heron's formula</h2>
+
+<p>Let a, b, c be the lengths of each side of a triangle.</p>
+
+<button onclick="calculate_area()">Calculate the area of the triangle</button>
+
+
+</body>
+</html>
